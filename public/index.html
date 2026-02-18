@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Happy Valentine's Day - เว็บไซต์วันวาเลนไทน์พิเศษสำหรับคนพิเศษ"
+    />
+    <title>💖 Happy Valentine's Day 💖</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Background Hearts Animation -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Header Section -->
+      <header class="header">
+        <h1 class="title fade-in" id="mainTitle">
+          💖 Happy Valentine's Day 💖
+        </h1>
+        <p class="subtitle fade-in-delay-1" id="mainSubtitle">
+          สุขสันต์วันแห่งความรัก
+        </p>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Love Message Card -->
+        <div class="card fade-in-delay-2">
+          <div class="card-header">
+            <span class="heart-icon">❤️</span>
+            <h2>ข้อความพิเศษสำหรับคุณ</h2>
+          </div>
+          <div class="card-body">
+            <p class="love-message" id="loveMessageText">กำลังโหลด...</p>
+          </div>
+        </div>
+
+        <!-- Image Gallery Carousel (Dynamic) -->
+        <div class="gallery-section fade-in-delay-3">
+          <h2 class="gallery-title">💝 Valentine's Gallery 💝</h2>
+          <div class="carousel-container">
+            <button class="carousel-btn prev-btn" id="prevBtn">‹</button>
+            <div class="carousel-wrapper">
+              <div class="carousel-track" id="carouselTrack">
+                <!-- Images loaded dynamically from API -->
+              </div>
+            </div>
+            <button class="carousel-btn next-btn" id="nextBtn">›</button>
+          </div>
+          <div class="carousel-indicators" id="carouselIndicators">
+            <!-- Indicators loaded dynamically -->
+          </div>
+        </div>
+
+        <!-- Interactive Buttons -->
+        <div class="buttons-container fade-in-delay-3">
+          <button class="btn btn-secondary" id="heartBtn">
+            <span class="btn-icon">💕</span>
+            <span class="btn-text">ส่งหัวใจ</span>
+          </button>
+
+          <button class="btn btn-accent" id="messageBtn">
+            <span class="btn-icon">💌</span>
+            <span class="btn-text">ข้อความพิเศษ</span>
+          </button>
+        </div>
+
+        <!-- Hidden Message -->
+        <div class="hidden-message" id="hiddenMessage">
+          <div class="message-card">
+            <button class="close-btn" id="closeBtn">✕</button>
+            <h3>💝 ข้อความจากใจ 💝</h3>
+            <p id="hiddenMessageText">กำลังโหลด...</p>
+          </div>
+        </div>
+
+        <!-- Quote Section -->
+        <div class="quote-section fade-in-delay-4">
+          <blockquote class="quote" id="quoteText">กำลังโหลด...</blockquote>
+          <p class="quote-author" id="quoteAuthor"></p>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>Made with 💖 for Valentine's Day 2026</p>
+        <a href="/admin" class="admin-link" id="adminLink">⚙️ จัดการเว็บไซต์</a>
+      </footer>
+    </div>
+
+    <!-- Music Player -->
+    <div class="music-player-container" id="musicPlayer">
+      <!-- Minimized icon (shows when minimized) -->
+      <div class="minimized-icon" id="minimizedIcon">💖🎵</div>
+
+      <div class="player-header" id="playerHeader">
+        <span class="player-title">🎵 Valentine's Music</span>
+        <div class="player-controls">
+          <button class="music-control-btn" id="musicControlBtn">▶️</button>
+          <button class="music-control-btn" id="minimizeBtn">▼</button>
+        </div>
+      </div>
+      <div class="player-body" id="playerBody">
+        <div class="player-time">
+          <span id="currentTime">0:00</span>
+          <span id="totalTime">0:00</span>
+        </div>
+        <div class="player-progress" id="playerProgress">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="bgMusic" loop>
+      <source src="audio/music.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="clickSound">
+      <source src="audio/button_click.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="heartSound">
+      <source src="audio/heart_sound.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

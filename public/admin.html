@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚙️ Admin Panel - Valentine's Day</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Header -->
+        <header class="admin-header">
+            <h1>⚙️ จัดการเว็บไซต์ Valentine</h1>
+            <a href="/" class="back-link">← กลับหน้าหลัก</a>
+        </header>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="messages">💬 ข้อความ</button>
+            <button class="tab-btn" data-tab="images">🖼️ รูปภาพ</button>
+        </div>
+
+        <!-- Messages Tab -->
+        <div class="tab-content active" id="messages-tab">
+            <form id="messagesForm">
+                <div class="form-group">
+                    <label for="title">หัวเรื่องหลัก</label>
+                    <input type="text" id="title" name="title" placeholder="เช่น 💖 Happy Valentine's Day 💖">
+                </div>
+
+                <div class="form-group">
+                    <label for="subtitle">หัวเรื่องรอง</label>
+                    <input type="text" id="subtitle" name="subtitle" placeholder="เช่น สุขสันต์วันแห่งความรัก">
+                </div>
+
+                <div class="form-group">
+                    <label for="loveMessage">ข้อความรัก (แสดงในการ์ดหลัก)</label>
+                    <textarea id="loveMessage" name="loveMessage" rows="4" placeholder="พิมพ์ข้อความรัก... (แต่ละบรรทัดจะแยกบรรทัดอัตโนมัติ)"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="hiddenMessage">ข้อความพิเศษ (popup เมื่อกดปุ่ม)</label>
+                    <textarea id="hiddenMessage" name="hiddenMessage" rows="4" placeholder="พิมพ์ข้อความพิเศษ..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="quote">คำคม</label>
+                    <textarea id="quote" name="quote" rows="3" placeholder="พิมพ์คำคม..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="quoteAuthor">ผู้เขียนคำคม</label>
+                    <input type="text" id="quoteAuthor" name="quoteAuthor" placeholder="เช่น Antoine de Saint-Exupéry">
+                </div>
+
+                <button type="submit" class="save-btn">💾 บันทึกข้อความ</button>
+            </form>
+            <div class="status-message" id="messageStatus"></div>
+        </div>
+
+        <!-- Images Tab -->
+        <div class="tab-content" id="images-tab">
+            <!-- Upload Section -->
+            <div class="upload-section">
+                <h3>📤 เพิ่มรูปภาพใหม่</h3>
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <div class="upload-area" id="uploadArea">
+                        <p>📁 คลิกเพื่อเลือกรูป หรือลากไฟล์มาวางที่นี่</p>
+                        <input type="file" id="imageInput" name="image" accept="image/*" hidden>
+                    </div>
+                    <div class="upload-preview" id="uploadPreview" style="display:none;">
+                        <img id="previewImg" src="" alt="Preview">
+                    </div>
+                    <div class="form-group" style="margin-top:15px;">
+                        <label for="imageAlt">ชื่อรูปภาพ</label>
+                        <input type="text" id="imageAlt" name="alt" placeholder="เช่น Valentine Hero">
+                    </div>
+                    <button type="submit" class="save-btn" id="uploadBtn" disabled>📤 อัปโหลดรูป</button>
+                </form>
+                <div class="status-message" id="imageStatus"></div>
+            </div>
+
+            <!-- Images Grid -->
+            <div class="images-grid-section">
+                <h3>🖼️ รูปภาพทั้งหมด (<span id="imageCount">0</span> รูป)</h3>
+                <div class="images-grid" id="imagesGrid">
+                    <!-- Images will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

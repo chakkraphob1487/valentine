@@ -1,0 +1,21 @@
+{
+  "name": "valentine-website",
+  "version": "1.0.0",
+  "description": "Valentine's Day themed website with music and interactive elements",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "valentine",
+    "romantic",
+    "website"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "multer": "^2.0.2"
+  }
+}

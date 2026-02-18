@@ -1,0 +1,42 @@
+{
+  "messages": {
+    "title": "💖 Happy Valentine's Day 💖",
+    "subtitle": "Valentine's Day comes only once a year, but every day is the day we wish each other well. 🤩",
+    "loveMessage": "I chose you because you are you. ",
+    "hiddenMessage": "Happy our day 💝",
+    "quote": "You should love me the best you can, because I've always done so. ",
+    "quoteAuthor": "From your love."
+  },
+  "images": [
+    {
+      "id": 1,
+      "filename": "1771327796425_inbound3336174573212838360.jpg",
+      "alt": "Valentine Image"
+    },
+    {
+      "id": 2,
+      "filename": "1771327902010_inbound1538633152802193291.jpg",
+      "alt": "Valentine Image"
+    },
+    {
+      "id": 3,
+      "filename": "1771327958803_inbound2064823012087700682.jpg",
+      "alt": "Valentine Image"
+    },
+    {
+      "id": 4,
+      "filename": "1771328000252_inbound5818128335931490840.jpg",
+      "alt": "Valentine Image"
+    },
+    {
+      "id": 5,
+      "filename": "1771328042877_inbound4124773971509531347.jpg",
+      "alt": "Valentine Image"
+    },
+    {
+      "id": 6,
+      "filename": "1771328130357_inbound1897931455487761368.jpg",
+      "alt": "Valentine Image"
+    }
+  ]
+}
